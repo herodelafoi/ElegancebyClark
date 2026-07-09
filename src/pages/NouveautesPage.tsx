@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 import { ArrowRight } from "lucide-react";
 
 const nouveautes = [
-  { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/xpR9ma9kXxWm2R8ReAb8jS/pasted-image-1773050077778.jpg", label: "Blazer - Rouge", badge: "Nouveau" },
+  { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/xpR9ma9kXxWm2R8ReAb8jS/pasted-image-1773050077778.jpg", label: "Kimono - Orange", badge: "Nouveau" },
   { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/mVyXsvQ27YzCtTDPrBNLpa/pasted-image-1777573117308.jpg", label: "Ensemble Noir", badge: "Bientôt" },
   { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/mTyfEMjgBvTqQUPYHHH2bZ/pasted-image-1773050439435.jpg", label: "Look Casual Été", badge: "Bientôt" },
 ];

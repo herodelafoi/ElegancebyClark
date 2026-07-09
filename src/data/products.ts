@@ -1,7 +1,7 @@
 export const products = [
   {
     id: "t-shirt-essential",
-    name: "Blazer - Rouge",
+    name: "Kimono - Orange",
     price: "20 000 FCFA",
     priceNum: 20000,
     img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/xpR9ma9kXxWm2R8ReAb8jS/pasted-image-1773050077778.jpg",
@@ -12,7 +12,7 @@ export const products = [
   },
   {
     id: "chemise-premium",
-    name: "Chemise Premium",
+    name: "Blazer - Rouge",
     price: "20 000 FCFA",
     priceNum: 20000,
     img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/6xSb6BwQwZkLo9vGKKoZPW/pasted-image-1773050229702.jpg",
@@ -23,7 +23,7 @@ export const products = [
   },
   {
     id: "polo-minimal",
-    name: "Polo Minimal",
+    name: "Complet Kimono + Pantalon Full Black",
     price: "35 000 FCFA",
     priceNum: 35000,
     img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/mVyXsvQ27YzCtTDPrBNLpa/pasted-image-1777573117308.jpg",
