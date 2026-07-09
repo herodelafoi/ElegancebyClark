@@ -34,10 +34,10 @@ export default function AProposPage() {
               <p className="text-xs tracking-[0.4em] uppercase text-brand-cream">Notre vision</p>
               <h2 className="text-3xl md:text-4xl font-light leading-snug" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>L'élégance masculine réinventée</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Élégance by Clark est une marque de vêtements pour homme dédiée au minimalisme et à l'élégance moderne. Chaque pièce est conçue pour offrir style, confort et durabilité.
+                Chez Élégance by Clark, nous croyons que l'élégance est un héritage, une signature et une manière de s'affirmer avec assurance. Notre vision est de bâtir une maison de mode africaine de prestige, capable de rivaliser avec les plus grandes références internationales, tout en valorisant notre identité et notre savoir-faire. Chaque création est pensée comme une œuvre où le raffinement, l'exigence et le souci du détail se rencontrent pour révéler le meilleur de celui ou celle qui la porte.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Nous croyons que la mode masculine n'a pas besoin d'être complexe pour être remarquable. Des coupes étudiées, des matières nobles, une esthétique sans superflu.
+                Nous ne créons pas simplement des vêtements : nous façonnons une image, une présence et une expérience. À travers des collections intemporelles, des finitions irréprochables et un service d'exception, nous souhaitons inspirer une génération qui choisit l'excellence sans compromis. Notre ambition est de faire d'Élégance by Clark un symbole de distinction, d'innovation et de luxe, reconnu en Côte d'Ivoire, en Afrique et sur les plus grandes scènes internationales. Porter Élégance by Clark, c'est choisir une identité où la confiance, le prestige et l'élégance deviennent une évidence.
               </p>
             </motion.div>
           </div>
