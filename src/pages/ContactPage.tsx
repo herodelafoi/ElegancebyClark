@@ -1,29 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 900));
-    setLoading(false);
-    setForm({ name: "", email: "", phone: "", message: "" });
-    toast.success("Message envoyé ! Nous vous répondrons dans les plus brefs délais.");
-  };
-
   return (
     <Layout>
       <section className="relative h-64 md:h-72 flex items-end justify-center pb-12 overflow-hidden">
@@ -60,19 +39,6 @@ export default function ContactPage() {
               ))}
             </div>
           </motion.div>
-
-          {/* Formulaire */}
-          <motion.form onSubmit={handleSubmit} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.1 }} className="flex flex-col gap-4 w-full">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input name="name" placeholder="Votre nom" value={form.name} onChange={handleChange} required className="rounded-none border-border bg-card h-12 text-sm" />
-              <Input name="email" type="email" placeholder="Votre email" value={form.email} onChange={handleChange} required className="rounded-none border-border bg-card h-12 text-sm" />
-            </div>
-            <Input name="phone" placeholder="Votre téléphone (optionnel)" value={form.phone} onChange={handleChange} className="rounded-none border-border bg-card h-12 text-sm" />
-            <Textarea name="message" placeholder="Votre message ou commande..." value={form.message} onChange={handleChange} required rows={6} className="rounded-none border-border bg-card text-sm resize-none" />
-            <Button type="submit" disabled={loading} className="bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none h-12 text-xs tracking-widest uppercase">
-              {loading ? "Envoi en cours..." : "Envoyer le message"}
-            </Button>
-          </motion.form>
 
         </div>
       </section>
