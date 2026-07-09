@@ -40,9 +40,9 @@ export default function Testimonials() {
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-8 border border-border hover:border-brand-cream/30 transition-colors"
+              className="p-8 border border-border hover:border-brand-cream/30 transition-colors text-center md:text-left"
             >
-              <div className="flex gap-1 mb-6">
+              <div className="flex justify-center md:justify-start gap-1 mb-6">
                 {Array.from({ length: t.stars }).map((_, j) => (
                   <Star key={j} className="w-4 h-4 fill-brand-cream text-brand-cream" />
                 ))}

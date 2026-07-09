@@ -30,7 +30,7 @@ export default function AProposPage() {
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-cream/30 hidden md:block" />
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="flex flex-col gap-6">
+            <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
               <p className="text-xs tracking-[0.4em] uppercase text-brand-cream">Notre vision</p>
               <h2 className="text-3xl md:text-4xl font-light leading-snug" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>L'élégance masculine réinventée</h2>
               <p className="text-muted-foreground leading-relaxed">
@@ -44,7 +44,7 @@ export default function AProposPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
-              <motion.div key={v.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex flex-col gap-4 p-6 border border-border hover:border-brand-cream/40 transition-colors">
+              <motion.div key={v.title} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="flex flex-col items-center text-center md:items-start md:text-left gap-4 p-6 border border-border hover:border-brand-cream/40 transition-colors">
                 <v.icon className="w-6 h-6 text-brand-cream" />
                 <h3 className="text-sm font-medium tracking-wide">{v.title}</h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">{v.desc}</p>

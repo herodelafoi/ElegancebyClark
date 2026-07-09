@@ -42,7 +42,7 @@ export default function BrandValues() {
             <motion.div
               key={v.title}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="flex flex-col items-start gap-4 p-6 border border-border hover:border-brand-cream/40 transition-colors group"
+              className="flex flex-col items-center text-center md:items-start md:text-left gap-4 p-6 border border-border hover:border-brand-cream/40 transition-colors group"
             >
               <v.icon className="w-6 h-6 text-brand-cream" />
               <h3 className="text-base font-medium tracking-wide">{v.title}</h3>

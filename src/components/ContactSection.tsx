@@ -39,7 +39,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
       {open && (
         <motion.p
           initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} transition={{ duration: 0.3 }}
-          className="text-sm text-muted-foreground leading-relaxed pb-5"
+          className="text-sm text-muted-foreground leading-relaxed pb-5 text-center md:text-left"
         >
           {a}
         </motion.p>

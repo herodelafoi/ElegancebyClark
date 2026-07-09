@@ -18,8 +18,8 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
             Voir le produit
           </Button>
         </div>
-        <h3 className="text-sm font-medium tracking-wide">{product.name}</h3>
-        <p className="text-sm text-brand-cream mt-1">{product.price}</p>
+        <h3 className="text-sm font-medium tracking-wide text-center md:text-left">{product.name}</h3>
+        <p className="text-sm text-brand-cream mt-1 text-center md:text-left">{product.price}</p>
       </Link>
     </motion.div>
   );

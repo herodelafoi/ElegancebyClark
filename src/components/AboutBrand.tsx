@@ -32,7 +32,7 @@ export default function AboutBrand() {
           once: true
         }} transition={{
           duration: 0.8
-        }} className="flex flex-col gap-6">
+        }} className="flex flex-col items-center text-center md:items-start md:text-left gap-6">
             <p className="text-xs tracking-[0.4em] uppercase text-brand-cream">Notre histoire</p>
             <h2 className="text-3xl md:text-4xl font-light leading-snug" style={{
             fontFamily: "'Playfair Display', Georgia, serif"

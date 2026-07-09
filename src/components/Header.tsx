@@ -37,14 +37,19 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ? "bg-background/95 backdrop-blur-md border-b border-border" : "bg-transparent"
     }`}>
-      <div className="container mx-auto px-6 h-16 grid grid-cols-3 items-center">
+      <div className="w-full px-4 md:px-8 h-16 grid grid-cols-3 items-center">
 
-        {/* Left links */}
-        <nav className="hidden md:flex items-center gap-8 justify-start">
-          {leftLinks.map(({ label, href }) => (
-            <Link key={label} to={href} className={linkClass(href)}>{label}</Link>
-          ))}
-        </nav>
+        {/* Left: mobile menu button, desktop links */}
+        <div className="flex items-center justify-start">
+          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
+            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </button>
+          <nav className="hidden md:flex items-center gap-8">
+            {leftLinks.map(({ label, href }) => (
+              <Link key={label} to={href} className={linkClass(href)}>{label}</Link>
+            ))}
+          </nav>
+        </div>
 
         {/* Center logo */}
         <div className="flex justify-center">
@@ -65,7 +70,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <Link to="/panier" className="relative">
+          <Link to="/panier" className="relative" aria-label="Panier">
             <ShoppingBag className="w-5 h-5 text-muted-foreground hover:text-foreground cursor-pointer transition-colors" />
             {totalItems > 0 && (
               <span className="absolute -top-2 -right-2 bg-brand-cream text-brand-dark text-[10px] font-semibold w-4 h-4 rounded-full flex items-center justify-center leading-none">
@@ -73,21 +78,16 @@ export default function Header() {
               </span>
             )}
           </Link>
-
-          {/* Mobile menu button */}
-          <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
         </div>
       </div>
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-background/98 backdrop-blur-md border-b border-border px-6 py-4 flex flex-col items-center text-center gap-4">
           {[...leftLinks, ...rightLinks].map(({ label, href }) => (
             <Link key={label} to={href} className={linkClass(href)}>{label}</Link>
           ))}
-          <Link to="/panier" className="flex items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors">
+          <Link to="/panier" className="flex items-center justify-center gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors">
             <ShoppingBag className="w-4 h-4" />
             Panier {totalItems > 0 && `(${totalItems})`}
           </Link>
