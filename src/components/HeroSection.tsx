@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 export default function HeroSection() {
-  return <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+  return <section className="relative h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1.08 }}

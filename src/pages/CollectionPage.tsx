@@ -14,7 +14,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
         <div className="relative overflow-hidden aspect-[3/4] mb-4">
           <img src={product.img} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-          <Button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none text-xs tracking-widest uppercase px-6 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 whitespace-nowrap">
+          <Button className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none text-xs tracking-widest uppercase px-6 opacity-100 translate-y-0 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-300 whitespace-nowrap">
             Voir le produit
           </Button>
         </div>
