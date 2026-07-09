@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-xs text-muted-foreground">© 2025 Élégance by Clark. Tous droits réservés.</p>
+        <p className="text-xs text-muted-foreground">© 2026 Élégance by Clark. Tous droits réservés.</p>
       </div>
     </footer>
   );
