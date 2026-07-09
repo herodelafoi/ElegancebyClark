@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 export default function HeroSection() {
   return <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -61,12 +61,12 @@ export default function HeroSection() {
         duration: 0.8,
         delay: 0.45
       }} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button className="bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none px-8 h-12 text-xs tracking-widest uppercase">
+          <Link to="/collection" className="inline-flex items-center justify-center font-medium bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none px-8 h-12 text-xs tracking-widest uppercase transition-colors">
             Découvrir la collection
-          </Button>
-          <Button variant="outline" className="rounded-none px-8 h-12 text-xs tracking-widest uppercase border-white/40 text-white hover:bg-white/10 hover:text-white">
-            Acheter maintenant <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          </Link>
+          <Link to="/contact" className="inline-flex items-center justify-center font-medium border bg-transparent rounded-none px-8 h-12 text-xs tracking-widest uppercase border-white/40 text-white hover:bg-white/10 transition-colors">
+            Nous contacter <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
         </motion.div>
       </div>
 
