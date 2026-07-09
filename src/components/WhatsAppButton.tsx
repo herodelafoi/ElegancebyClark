@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
-  const phoneNumber = "22500000000"; // Remplace par ton numéro WhatsApp
+  const phoneNumber = "2250779084394";
   const message = encodeURIComponent("Bonjour, je souhaite passer une commande Élégance by Clark 👋");
   const url = `https://wa.me/${phoneNumber}?text=${message}`;
 

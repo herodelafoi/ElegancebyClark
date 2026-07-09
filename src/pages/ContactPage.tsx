@@ -26,8 +26,8 @@ export default function ContactPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-8 w-full">
               {[
                 { icon: Mail, label: "Email", value: "contact@elegancebyclark.com" },
-                { icon: Phone, label: "WhatsApp / Téléphone", value: "+225 00 00 00 00 00" },
-                { icon: MapPin, label: "Localisation", value: "Abidjan, Côte d'Ivoire" },
+                { icon: Phone, label: "WhatsApp / Téléphone", value: "+225 07 79 08 43 94" },
+                { icon: MapPin, label: "Localisation", value: "Cocody 2 Plateaux Vallon, Rue des Jardins" },
               ].map(({ icon: Icon, label, value }) => (
                 <div key={label} className="flex flex-col items-center gap-2">
                   <div className="w-10 h-10 border border-brand-cream/30 flex items-center justify-center">

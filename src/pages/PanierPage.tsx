@@ -149,7 +149,7 @@ export default function PanierPage() {
                         .map((i) => `- ${i.name} (Taille: ${i.size}) x${i.quantity} = ${formatPrice(i.priceNum * i.quantity)}`)
                         .join("\n")}\n\nTotal : ${formatPrice(totalPrice)}`
                     );
-                    window.open(`https://wa.me/+221000000000?text=${msg}`, "_blank");
+                    window.open(`https://wa.me/2250779084394?text=${msg}`, "_blank");
                   }}
                 >
                   Commander via WhatsApp
