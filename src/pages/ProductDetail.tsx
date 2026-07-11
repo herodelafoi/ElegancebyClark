@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { products } from "@/data/products";
 import { Toaster } from "@/components/ui/sonner";
 import { useCart } from "@/context/CartContext";
+import { useSeo } from "@/hooks/useSeo";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -14,6 +15,14 @@ export default function ProductDetail() {
   const product = products.find((p) => p.id === id);
   const [selectedSize, setSelectedSize] = useState("");
   const { addItem } = useCart();
+
+  // Called before the early return below: hooks must run on every render.
+  useSeo(
+    product ? `${product.name} | Élégance by Clark` : "Produit introuvable | Élégance by Clark",
+    product
+      ? `${product.name} — ${product.price}. ${product.description.split("\n")[0]}`
+      : "Ce produit n'existe pas ou n'est plus disponible."
+  );
 
   if (!product) return (
     <div className="min-h-screen flex items-center justify-center bg-background">

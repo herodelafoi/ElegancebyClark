@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: "t-shirt-essential",
+    id: "kimono-signature-terracotta",
     name: "Kimono Signature Terracotta",
     price: "20 000 FCFA",
     priceNum: 20000,
@@ -11,7 +11,7 @@ export const products = [
     category: "Hauts",
   },
   {
-    id: "chemise-premium",
+    id: "blazer-signature-rouge-carmin",
     name: "Blazer Signature Rouge Carmin",
     price: "20 000 FCFA",
     priceNum: 20000,
@@ -22,7 +22,7 @@ export const products = [
     category: "Hauts",
   },
   {
-    id: "polo-minimal",
+    id: "ensemble-signature-noir",
     name: "Ensemble Signature Noir",
     price: "35 000 FCFA",
     priceNum: 35000,

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useSeo } from "@/hooks/useSeo";
 import { ShoppingBag, Minus, Plus, Trash2, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -10,6 +11,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function PanierPage() {
+  useSeo(
+    "Mon panier | Élégance by Clark",
+    "Votre panier Élégance by Clark. Finalisez votre commande via WhatsApp."
+  );
+
   const { items, removeItem, updateQuantity, clearCart, totalItems, totalPrice } = useCart();
 
   const formatPrice = (num: number) =>

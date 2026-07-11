@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://élégancebyclark.com/sitemap.xml
+Sitemap: https://xn--lgancebyclark-9gbb.com/sitemap.xml

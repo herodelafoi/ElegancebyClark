@@ -18,8 +18,14 @@ import AProposPage from "@/pages/AProposPage";
 import ContactPage from "@/pages/ContactPage";
 import PanierPage from "@/pages/PanierPage";
 import { CartProvider } from "@/context/CartContext";
+import { useSeo } from "@/hooks/useSeo";
 
 function Home() {
+  useSeo(
+    "Élégance by Clark | Vêtements modernes pour hommes à Abidjan",
+    "Élégance by Clark habille l'homme moderne : kimonos, blazers signature et ensembles, casual chic et intemporels. Commande via WhatsApp, livraison à Abidjan."
+  );
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />

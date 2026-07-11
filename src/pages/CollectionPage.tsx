@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import Layout from "@/components/Layout";
@@ -26,6 +27,11 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 }
 
 export default function CollectionPage() {
+  useSeo(
+    "Collection | Élégance by Clark",
+    "Découvrez la collection Élégance by Clark : kimonos, blazers signature et ensembles pour hommes, à Abidjan. Commande simple via WhatsApp."
+  );
+
   return (
     <Layout>
       <section className="relative h-64 md:h-80 flex items-end justify-center pb-12 overflow-hidden">
