@@ -32,6 +32,17 @@ export const products = [
     sizes: ["XS", "S", "M", "L", "XL"],
     category: "Hauts",
   },
+  {
+    id: "blazer-signature-bleu-ciel",
+    name: "Blazer Signature Bleu Ciel",
+    price: "20 000 FCFA",
+    priceNum: 20000,
+    img: "/blazer-signature-bleu-ciel.jpg",
+    description: "Un blazer bleu ciel rehaussé de fines rayures blanches verticales. Fermeture zippée sur toute la hauteur et col chemise structuré, pour une pièce qui se porte aussi bien sur une chemise blanche qu'à même la peau.",
+    details: ["Rayures fines verticales", "Fermeture zippée", "Col chemise structuré", "Poches latérales"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "Hauts",
+  },
 ];
 
 export type Product = typeof products[0];
