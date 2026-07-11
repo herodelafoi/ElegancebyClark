@@ -9,7 +9,7 @@ export default function HeroSection() {
         transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/nq9P8LbMwcSiALkvGHm4vq/pasted-image-1773049767420.jpg')",
+          backgroundImage: "url('/hero.jpg')",
           backgroundPosition: "center 20%"
         }}
       />

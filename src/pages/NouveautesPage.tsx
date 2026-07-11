@@ -6,9 +6,9 @@ import Layout from "@/components/Layout";
 import { ArrowRight } from "lucide-react";
 
 const nouveautes = [
-  { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/xpR9ma9kXxWm2R8ReAb8jS/pasted-image-1773050077778.jpg", label: "Kimono - Orange", badge: "Nouveau" },
-  { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/mVyXsvQ27YzCtTDPrBNLpa/pasted-image-1777573117308.jpg", label: "Ensemble Noir", badge: "Bientôt" },
-  { img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/mTyfEMjgBvTqQUPYHHH2bZ/pasted-image-1773050439435.jpg", label: "Look Casual Été", badge: "Bientôt" },
+  { img: "/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
+  { img: "/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Bientôt" },
+  { img: "/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
 ];
 
 export default function NouveautesPage() {
@@ -20,7 +20,7 @@ export default function NouveautesPage() {
   return (
     <Layout>
       <section className="relative h-64 md:h-80 flex items-end justify-center pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/nq9P8LbMwcSiALkvGHm4vq/pasted-image-1773049767420.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero.jpg')" }} />
         <div className="absolute inset-0 bg-black/60" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-brand-cream mb-3">Collection 2026</p>

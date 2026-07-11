@@ -35,7 +35,7 @@ export default function CollectionPage() {
   return (
     <Layout>
       <section className="relative h-64 md:h-80 flex items-end justify-center pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/nq9P8LbMwcSiALkvGHm4vq/pasted-image-1773049767420.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero.jpg')" }} />
         <div className="absolute inset-0 bg-black/60" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-brand-cream mb-3">Élégance by Clark</p>

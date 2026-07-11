@@ -55,7 +55,7 @@ export default function Header() {
         <div className="flex justify-center">
           <Link to="/" className="block">
             <img
-              src="https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/4b69eYEN5c18kcJmmashgU/pasted-image-1773049142467.jpg"
+              src="/logo.jpg"
               alt="Élégance by Clark"
               className="h-10 w-auto object-contain rounded-sm"
             />

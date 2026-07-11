@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 const images = [
   { src: "/lookbook-kimono-terracotta-exterieur.jpg", alt: "Kimono terracotta porté sur un pantalon noir, en extérieur", tall: true, position: "object-center" },
   { src: "/lookbook-kimono-vert.jpg", alt: "Kimono vert porté ouvert sur un t-shirt blanc", tall: false, position: "object-center" },
-  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/48h4z5VfXx3rwv3XJfLP6H/pasted-image-1777573693486.jpg", alt: "Silhouette Élégance by Clark", tall: false, position: "object-center" },
+  { src: "/lookbook-silhouette.jpg", alt: "Silhouette Élégance by Clark", tall: false, position: "object-center" },
   { src: "/lookbook-kimono-rouge-bureau.jpg", alt: "Kimono rouge à ceinture nouée, porté sur un pantalon noir", tall: true, position: "object-[center_25%]" },
 ];
 

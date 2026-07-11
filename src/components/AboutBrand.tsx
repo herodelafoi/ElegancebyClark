@@ -17,7 +17,7 @@ export default function AboutBrand() {
           duration: 0.8
         }} className="relative">
             <div className="aspect-[4/5] overflow-hidden">
-              <img src="https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/uv1U1QhqPmictneSn2SZxg/pasted-image-1778071934317-zkhpihnt.jpeg" alt="About FORMA" className='w-full h-full object-cover' />
+              <img src="/about-brand.jpg" alt="About FORMA" className='w-full h-full object-cover' />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-cream/30 hidden md:block" />
           </motion.div>
