@@ -1,12 +1,12 @@
 export const products = [
   {
     id: "t-shirt-essential",
-    name: "Kimono - Orange",
+    name: "Kimono Signature Terracotta",
     price: "20 000 FCFA",
     priceNum: 20000,
-    img: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/xpR9ma9kXxWm2R8ReAb8jS/pasted-image-1773050077778.jpg",
-    description: "Un t-shirt intemporel taillé dans un coton pima ultra-doux. Coupe droite légèrement ajustée, col rond renforcé et coutures plates pour un confort optimal au quotidien.",
-    details: ["100% coton Pima", "Coupe droite ajustée", "Col rond renforcé", "Lavage à 30°C"],
+    img: "/kimono-signature-terracotta.jpg",
+    description: "Un kimono terracotta à la coupe croisée, porté cache-cœur et retenu par une ceinture à nouer à la taille. Col châle et manches larges trois-quarts : une pièce qui s'ouvre sur un pantalon noir comme sur une tenue claire.",
+    details: ["Coupe croisée cache-cœur", "Ceinture à nouer", "Col châle", "Manches larges trois-quarts"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     category: "Hauts",
   },
