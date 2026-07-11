@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -41,9 +42,11 @@ export default function Lookbook() {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" className="rounded-none px-10 h-12 text-xs tracking-widest uppercase border-foreground/30 text-foreground hover:bg-foreground/5">
-            Voir toute la collection <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+          <Link to="/collection">
+            <Button variant="outline" className="rounded-none px-10 h-12 text-xs tracking-widest uppercase border-foreground/30 text-foreground hover:bg-foreground/5">
+              Voir toute la collection <ArrowRight className="w-4 h-4 ml-2" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

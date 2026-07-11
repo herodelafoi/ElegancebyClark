@@ -19,6 +19,7 @@ import ContactPage from "@/pages/ContactPage";
 import PanierPage from "@/pages/PanierPage";
 import { CartProvider } from "@/context/CartContext";
 import { useSeo } from "@/hooks/useSeo";
+import JsonLd from "@/components/JsonLd";
 
 function Home() {
   useSeo(
@@ -28,6 +29,23 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <JsonLd
+        id="ld-store"
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ClothingStore",
+          name: "Élégance by Clark",
+          description: "Vêtements modernes pour hommes : kimonos, blazers signature et ensembles.",
+          url: "https://xn--lgancebyclark-9gbb.com/",
+          telephone: "+2250779084394",
+          address: { "@type": "PostalAddress", addressLocality: "Abidjan", addressCountry: "CI" },
+          sameAs: [
+            "https://www.instagram.com/eleganceby_clark",
+            "https://www.facebook.com/share/1DH57E3Xri/",
+            "https://www.tiktok.com/@elegance_.by.clark",
+          ],
+        }}
+      />
       <Toaster position="top-center" />
       <Header />
       <main>
