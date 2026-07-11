@@ -24,18 +24,18 @@ export default function PanierPage() {
         {/* Back */}
         <Link
           to="/collection"
-          className="inline-flex items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors mb-10"
+          className="flex w-full justify-center md:inline-flex md:w-auto md:justify-start items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors mb-10"
         >
           <ArrowLeft className="w-4 h-4" /> Continuer les achats
         </Link>
 
         <h1
-          className="text-3xl md:text-4xl font-light mb-2"
+          className="text-3xl md:text-4xl font-light mb-2 text-center md:text-left"
           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
         >
           Mon Panier
         </h1>
-        <p className="text-sm text-muted-foreground mb-10">
+        <p className="text-sm text-muted-foreground mb-10 text-center md:text-left">
           {totalItems === 0
             ? "Votre panier est vide"
             : `${totalItems} article${totalItems > 1 ? "s" : ""}`}
@@ -109,7 +109,7 @@ export default function PanierPage() {
 
               <button
                 onClick={clearCart}
-                className="self-start text-xs text-muted-foreground hover:text-destructive transition-colors tracking-wider uppercase underline underline-offset-4"
+                className="self-center md:self-start text-xs text-muted-foreground hover:text-destructive transition-colors tracking-wider uppercase underline underline-offset-4"
               >
                 Vider le panier
               </button>
@@ -123,7 +123,7 @@ export default function PanierPage() {
               className="lg:col-span-1"
             >
               <div className="border border-border p-6 sticky top-28">
-                <h2 className="text-sm tracking-[0.25em] uppercase mb-6">
+                <h2 className="text-sm tracking-[0.25em] uppercase mb-6 text-center md:text-left">
                   Récapitulatif
                 </h2>
                 <div className="flex flex-col gap-3 text-sm">
