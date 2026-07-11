@@ -53,12 +53,12 @@ export default function Testimonials() {
             Ils portent déjà la marque
           </h2>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto -mx-6 px-6 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-3 md:gap-8 md:mx-0 md:px-0 md:pb-0 md:overflow-visible">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="p-8 border border-border hover:border-brand-cream/30 transition-colors text-center md:text-left"
+              className="shrink-0 basis-[85%] snap-center p-8 border border-border hover:border-brand-cream/30 transition-colors text-center md:shrink md:basis-auto md:text-left"
             >
               <div className="flex justify-center md:justify-start gap-1 mb-6">
                 {Array.from({ length: t.stars }).map((_, j) => (
