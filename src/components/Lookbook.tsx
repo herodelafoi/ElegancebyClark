@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const images = [
-  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/fVbFzFXATgiGTXDzatz5ot/pasted-image-1778071542218-s5g699o0.jpeg", tall: true },
-  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/7Ut6WbrdquiJPwgPbzgMHo/pasted-image-1778071668444-af51p380.jpeg", tall: false },
-  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/48h4z5VfXx3rwv3XJfLP6H/pasted-image-1777573693486.jpg", tall: false },
-  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/3qgjVFVVutCJ3hYjPHqyW5/pasted-image-1773051096760.jpg", tall: true },
+  { src: "/lookbook-kimono-terracotta-exterieur.jpg", alt: "Kimono terracotta porté sur un pantalon noir, en extérieur", tall: true },
+  { src: "/lookbook-kimono-vert.jpg", alt: "Kimono vert porté ouvert sur un t-shirt blanc", tall: false },
+  { src: "https://images.fillout.com/orgid-137650/flowpublicid-pqmemxr9rp/widgetid-default/48h4z5VfXx3rwv3XJfLP6H/pasted-image-1777573693486.jpg", alt: "Silhouette Élégance by Clark", tall: false },
+  { src: "/lookbook-kimono-rouge-bureau.jpg", alt: "Kimono rouge à ceinture nouée, porté sur un pantalon noir", tall: true },
 ];
 
 export default function Lookbook() {
@@ -30,7 +30,7 @@ export default function Lookbook() {
               initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: i * 0.1 }}
               className={`overflow-hidden ${img.tall ? "row-span-2" : ""}`}
             >
-              <img src={img.src} alt="lookbook" className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-700" />
+              <img src={img.src} alt={img.alt} loading="lazy" className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-700" />
             </motion.div>
           ))}
         </div>
