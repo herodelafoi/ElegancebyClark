@@ -27,7 +27,7 @@ export const products = [
     price: "35 000 FCFA",
     priceNum: 35000,
     img: "/ensemble-signature-noir.jpg",
-    description: "Un ensemble deux pièces entièrement noir : veste kimono ouverte, à col châle drapé et manches amples, portée sur un pantalon assorti à la tombée fluide. Le total look, sans un mot de trop.",
+    description: "Alliance parfaite entre modernité et raffinement, l'Ensemble Signature Noir est conçu pour l'homme qui choisit de se distinguer avec sobriété. Composé d'un kimono à la coupe fluide et d'un pantalon parfaitement structuré, il offre une silhouette élégante, confortable et résolument intemporelle.\n\nChaque détail est pensé pour incarner la confiance, le caractère et le luxe discret, faisant de cette tenue un indispensable pour toutes les occasions où l'élégance est de mise.",
     details: ["Ensemble deux pièces", "Veste kimono ouverte", "Col châle drapé", "Pantalon à la tombée fluide", "Noir uni"],
     sizes: ["XS", "S", "M", "L", "XL"],
     category: "Hauts",

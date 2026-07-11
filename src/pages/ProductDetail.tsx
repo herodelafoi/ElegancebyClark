@@ -47,7 +47,7 @@ export default function ProductDetail() {
             <p className="text-xs tracking-[0.4em] uppercase text-brand-cream">{product.category}</p>
             <h1 className="text-3xl md:text-4xl font-light" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{product.name}</h1>
             <p className="text-2xl text-brand-cream font-light">{product.price}</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">{product.description}</p>
+            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{product.description}</p>
             <div>
               <p className="text-xs tracking-widest uppercase mb-3">Taille</p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2">
