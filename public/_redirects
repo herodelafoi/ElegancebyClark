@@ -1,0 +1,5 @@
+# The three product ids were renamed on 2026-07-11. Google had already
+# indexed the old URLs, so send them to the new ones permanently.
+/product/t-shirt-essential  /product/kimono-signature-terracotta  301
+/product/chemise-premium    /product/blazer-signature-rouge-carmin  301
+/product/polo-minimal       /product/ensemble-signature-noir  301
