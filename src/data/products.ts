@@ -5,7 +5,7 @@ export const products = [
     price: "20 000 FCFA",
     priceNum: 20000,
     img: "/kimono-signature-terracotta.jpg",
-    description: "Un kimono terracotta à la coupe croisée, porté cache-cœur et retenu par une ceinture à nouer à la taille. Col châle et manches larges trois-quarts : une pièce qui s'ouvre sur un pantalon noir comme sur une tenue claire.",
+    description: "Pensé pour l'homme qui affirme son style avec subtilité, le Kimono Signature Terracotta séduit par sa coupe épurée, son tissu premium et sa teinte chaleureuse au caractère unique. Une pièce contemporaine qui marie confort, élégance et distinction avec naturel.",
     details: ["Coupe croisée cache-cœur", "Ceinture à nouer", "Col châle", "Manches larges trois-quarts"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     category: "Hauts",
