@@ -3,21 +3,39 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Alexandre M.",
-    role: "Designer, Paris",
-    text: "La qualité du tissu est exceptionnelle. Je porte le Hoodie Signature depuis 6 mois et il est toujours impeccable.",
+    name: "Yann K.",
+    role: "Architecte, Cocody",
+    text: "J'ai porté l'Ensemble Signature Noir à un mariage : le kimono tombe parfaitement et le pantalon garde sa ligne toute la soirée. On m'a demandé la marque trois fois.",
     stars: 5,
   },
   {
-    name: "Thomas B.",
-    role: "Entrepreneur, Lyon",
-    text: "Style élégant et coupe parfaite. La Chemise Premium est devenue mon indispensable pour les réunions professionnelles.",
+    name: "Serge A.",
+    role: "Consultant, Plateau",
+    text: "Le Blazer Signature Rouge Carmin ne passe pas inaperçu, et c'est exactement ce que je cherchais. Bien coupé, il se porte aussi bien sur un jean que sur un pantalon habillé.",
     stars: 5,
   },
   {
-    name: "Julien R.",
-    role: "Architecte, Bordeaux",
-    text: "Un confort incroyable au quotidien. Ces vêtements sont exactement ce que je cherchais : simples, élégants, durables.",
+    name: "Ibrahim T.",
+    role: "Photographe, Marcory",
+    text: "Le Kimono Signature Terracotta est devenu ma pièce préférée. La couleur est encore plus belle en vrai, et la ceinture permet de l'ajuster comme on veut.",
+    stars: 5,
+  },
+  {
+    name: "Franck D.",
+    role: "Entrepreneur, Yamoussoukro",
+    text: "Le Blazer Signature Bleu Ciel est parfait pour mes rendez-vous : chic sans être guindé. Les rayures font tout le travail.",
+    stars: 5,
+  },
+  {
+    name: "Aristide N.",
+    role: "Directeur commercial, Grand-Bassam",
+    text: "J'hésitais sur le caramel, j'ai eu raison de me lancer. La teinte réchauffe immédiatement une tenue claire et la coupe est impeccable.",
+    stars: 5,
+  },
+  {
+    name: "Cédric O.",
+    role: "Ingénieur, Bouaké",
+    text: "Commande passée sur WhatsApp le matin, livrée le lendemain. Le service est aussi soigné que les vêtements.",
     stars: 5,
   },
 ];
