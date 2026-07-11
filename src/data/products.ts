@@ -43,6 +43,17 @@ export const products = [
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "Hauts",
   },
+  {
+    id: "blazer-signature-caramel",
+    name: "Blazer Signature Caramel",
+    price: "20 000 FCFA",
+    priceNum: 20000,
+    img: "/blazer-signature-caramel.jpg",
+    description: "Le blazer Signature décliné dans un caramel chaud, animé de fines rayures ton sur ton. Fermeture zippée et col chemise structuré, une pièce qui réchauffe une tenue claire comme un pantalon beige ou blanc.",
+    details: ["Rayures fines ton sur ton", "Fermeture zippée", "Col chemise structuré", "Poches latérales"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    category: "Hauts",
+  },
 ];
 
 export type Product = typeof products[0];
