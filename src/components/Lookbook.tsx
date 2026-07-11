@@ -42,9 +42,9 @@ export default function Lookbook() {
         </div>
 
         <div className="text-center">
-          <Link to="/collection">
+          <Link to="/contact">
             <Button variant="outline" className="rounded-none px-10 h-12 text-xs tracking-widest uppercase border-foreground/30 text-foreground hover:bg-foreground/5">
-              Voir toute la collection <ArrowRight className="w-4 h-4 ml-2" />
+              Contactez-nous <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </Link>
         </div>
