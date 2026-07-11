@@ -15,6 +15,13 @@ export default function PanierPage() {
   const formatPrice = (num: number) =>
     new Intl.NumberFormat("fr-FR").format(num) + " FCFA";
 
+  const whatsappMessage = encodeURIComponent(
+    `Bonjour, je souhaite commander :\n${items
+      .map((i) => `- ${i.name} (Taille: ${i.size}) x${i.quantity} = ${formatPrice(i.priceNum * i.quantity)}`)
+      .join("\n")}\n\nTotal : ${formatPrice(totalPrice)}`
+  );
+  const whatsappUrl = `https://wa.me/2250779084394?text=${whatsappMessage}`;
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Toaster position="top-center" />
@@ -141,19 +148,14 @@ export default function PanierPage() {
                   <span>Total</span>
                   <span className="text-brand-cream">{formatPrice(totalPrice)}</span>
                 </div>
-                <Button
-                  className="w-full bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none h-12 text-xs tracking-widest uppercase"
-                  onClick={() => {
-                    const msg = encodeURIComponent(
-                      `Bonjour, je souhaite commander :\n${items
-                        .map((i) => `- ${i.name} (Taille: ${i.size}) x${i.quantity} = ${formatPrice(i.priceNum * i.quantity)}`)
-                        .join("\n")}\n\nTotal : ${formatPrice(totalPrice)}`
-                    );
-                    window.open(`https://wa.me/2250779084394?text=${msg}`, "_blank");
-                  }}
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none h-12 text-xs tracking-widest uppercase flex items-center justify-center transition-colors"
                 >
                   Commander via WhatsApp
-                </Button>
+                </a>
                 <p className="text-[11px] text-muted-foreground text-center mt-3 leading-relaxed">
                   Vous serez redirigé vers WhatsApp pour finaliser votre commande.
                 </p>
