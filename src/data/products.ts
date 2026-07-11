@@ -16,7 +16,7 @@ export const products = [
     price: "20 000 FCFA",
     priceNum: 20000,
     img: "/blazer-signature-rouge-carmin.jpg",
-    description: "Le blazer Signature dans un rouge carmin profond, uni et sans fioriture. Fermeture zippée, col chemise, bas et poignets en bord-côte : une pièce franche, qui suffit à porter toute une tenue.",
+    description: "Pièce audacieuse et raffinée, conçue pour ceux qui assument une élégance affirmée. Un blazer signature, fort et intemporel.",
     details: ["Rouge carmin uni", "Fermeture zippée", "Col chemise", "Bas et poignets en bord-côte", "Poches passepoilées"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "Hauts",
