@@ -57,7 +57,7 @@ export default function ProductDetail() {
           brand: { "@type": "Brand", name: "Élégance by Clark" },
           offers: {
             "@type": "Offer",
-            url: `${SITE}/product/${product.id}`,
+            url: `${SITE}/product/${product.id}/`,
             price: product.priceNum,
             priceCurrency: "XOF",
             availability: "https://schema.org/InStock",

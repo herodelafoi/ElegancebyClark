@@ -89,7 +89,9 @@ const routes = [
 ];
 
 for (const route of routes) {
-  const url = `${SITE}${route.path}`;
+  // Cloudflare serves dist/x/index.html at /x/ and 308s /x to it, so the
+  // canonical has to carry the trailing slash or Google sees two URLs per page.
+  const url = route.path === "/" ? `${SITE}/` : `${SITE}${route.path}/`;
   const image = route.image ?? null;
 
   let html = template
