@@ -38,7 +38,7 @@ export const products = [
     price: "20 000 FCFA",
     priceNum: 20000,
     img: "/blazer-signature-bleu-ciel.jpg",
-    description: "Un blazer bleu ciel rehaussé de fines rayures blanches verticales. Fermeture zippée sur toute la hauteur et col chemise structuré, pour une pièce qui se porte aussi bien sur une chemise blanche qu'à même la peau.",
+    description: "Un blazer moderne à rayures verticales, pensé pour une allure chic et décontractée. Idéal pour sublimer un look casual chic avec caractère.",
     details: ["Rayures fines verticales", "Fermeture zippée", "Col chemise structuré", "Poches latérales"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     category: "Hauts",
