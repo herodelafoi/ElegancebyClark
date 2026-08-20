@@ -1,13 +1,10 @@
 import { motion } from "framer-motion";
-import { useSeo } from "@/hooks/useSeo";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function ContactPage() {
-  useSeo(
-    "Contact | Élégance by Clark",
-    "Contactez Élégance by Clark à Abidjan : commande et conseil par WhatsApp au +225 07 79 08 43 94."
-  );
+  usePageTitle("Contact | Élégance by Clark");
 
   return (
     <Layout>

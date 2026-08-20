@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useSeo } from "@/hooks/useSeo";
 import Layout from "@/components/Layout";
 import { Gem, Layers, Wind, Infinity } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const values = [
   { icon: Gem, title: "Qualité premium", desc: "Tissus sélectionnés pour garantir confort et durabilité." },
@@ -11,10 +11,7 @@ const values = [
 ];
 
 export default function AProposPage() {
-  useSeo(
-    "À propos | Élégance by Clark",
-    "L'histoire d'Élégance by Clark, marque ivoirienne de vêtements pour hommes : une élégance masculine simple, contemporaine et intemporelle."
-  );
+  usePageTitle("À propos | Élégance by Clark");
 
   return (
     <Layout>

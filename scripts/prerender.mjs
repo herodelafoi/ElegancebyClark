@@ -4,7 +4,7 @@
  * The app is client-rendered, so the HTML Vite ships has an empty <body> — a
  * crawler that does not execute JavaScript sees nothing at all. This fills each
  * route's #root with the text that route actually displays, and gives it its own
- * title, description and canonical URL. React replaces the markup on mount, so
+ * title and description. React replaces the markup on mount, so
  * what a crawler reads is what a visitor reads.
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -13,7 +13,6 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
-const SITE = "https://xn--lgancebyclark-9gbb.com";
 
 const products = JSON.parse(readFileSync(join(root, "src/data/products.json"), "utf8"));
 const template = readFileSync(join(dist, "index.html"), "utf8");
@@ -50,7 +49,7 @@ const productList = products
 const routes = [
   {
     path: "/",
-    title: "Élégance by Clark | Vêtements modernes pour hommes à Abidjan",
+    title: "Élégance by Clark",
     description:
       "Élégance by Clark habille l'homme moderne : kimonos, blazers signature et ensembles, casual chic et intemporels. Commande via WhatsApp, livraison à Abidjan.",
     body: `
@@ -74,7 +73,6 @@ const routes = [
     path: `/product/${p.id}`,
     title: `${p.name} | Élégance by Clark`,
     description: `${p.name} — ${p.price}. ${p.description.split("\n")[0]}`,
-    image: `${SITE}${p.img}`,
     body: `
       <h1>${esc(p.name)}</h1>
       <p>${esc(p.price)}</p>
@@ -89,35 +87,13 @@ const routes = [
 ];
 
 for (const route of routes) {
-  // Cloudflare serves dist/x/index.html at /x/ and 308s /x to it, so the
-  // canonical has to carry the trailing slash or Google sees two URLs per page.
-  const url = route.path === "/" ? `${SITE}/` : `${SITE}${route.path}/`;
-  const image = route.image ?? null;
-
-  let html = template
+  const html = template
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
     .replace(
       /<meta name="description"[^>]*>/,
       `<meta name="description" content="${esc(route.description)}">`
     )
-    .replace(
-      /<meta property="og:title"[^>]*>/,
-      `<meta property="og:title" content="${esc(route.title)}">`
-    )
-    .replace(
-      /<meta property="og:description"[^>]*>/,
-      `<meta property="og:description" content="${esc(route.description)}">`
-    )
-    .replace(/<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${url}">`)
-    .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${url}">`)
     .replace('<div id="root"></div>', `<div id="root">${route.body}</div>`);
-
-  if (image) {
-    html = html.replace(
-      /<meta property="og:image"[^>]*>/,
-      `<meta property="og:image" content="${image}">`
-    );
-  }
 
   const dir = route.path === "/" ? dist : join(dist, route.path);
   mkdirSync(dir, { recursive: true });

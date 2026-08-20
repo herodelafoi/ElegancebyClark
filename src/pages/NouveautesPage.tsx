@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { ArrowRight } from "lucide-react";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 const nouveautes = [
   { img: "/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
@@ -12,10 +12,7 @@ const nouveautes = [
 ];
 
 export default function NouveautesPage() {
-  useSeo(
-    "Nouveautés | Élégance by Clark",
-    "Les dernières pièces Élégance by Clark : blazers signature, kimonos et ensembles pour hommes. Nouveautés à découvrir à Abidjan."
-  );
+  usePageTitle("Nouveautés | Élégance by Clark");
 
   return (
     <Layout>

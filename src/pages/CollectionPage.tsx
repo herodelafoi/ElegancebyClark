@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useSeo } from "@/hooks/useSeo";
 import { Button } from "@/components/ui/button";
 import { products } from "@/data/products";
 import Layout from "@/components/Layout";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 function ProductCard({ product, index }: { product: typeof products[0]; index: number }) {
   return (
@@ -27,10 +27,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 }
 
 export default function CollectionPage() {
-  useSeo(
-    "Collection | Élégance by Clark",
-    "Découvrez la collection Élégance by Clark : kimonos, blazers signature et ensembles pour hommes, à Abidjan. Commande simple via WhatsApp."
-  );
+  usePageTitle("Collection | Élégance by Clark");
 
   return (
     <Layout>

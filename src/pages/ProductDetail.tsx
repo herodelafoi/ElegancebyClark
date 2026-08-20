@@ -7,8 +7,7 @@ import { toast } from "sonner";
 import { products } from "@/data/products";
 import { Toaster } from "@/components/ui/sonner";
 import { useCart } from "@/context/CartContext";
-import { useSeo } from "@/hooks/useSeo";
-import JsonLd from "@/components/JsonLd";
+import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -18,12 +17,7 @@ export default function ProductDetail() {
   const { addItem } = useCart();
 
   // Called before the early return below: hooks must run on every render.
-  useSeo(
-    product ? `${product.name} | Élégance by Clark` : "Produit introuvable | Élégance by Clark",
-    product
-      ? `${product.name} — ${product.price}. ${product.description.split("\n")[0]}`
-      : "Ce produit n'existe pas ou n'est plus disponible."
-  );
+  usePageTitle(product ? `${product.name} | Élégance by Clark` : "Élégance by Clark");
 
   if (!product) return (
     <div className="min-h-screen flex items-center justify-center bg-background">
@@ -42,28 +36,8 @@ export default function ProductDetail() {
     );
   };
 
-  const SITE = "https://xn--lgancebyclark-9gbb.com";
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <JsonLd
-        id="ld-product"
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          name: product.name,
-          image: `${SITE}${product.img}`,
-          description: product.description.replace(/\n+/g, " "),
-          brand: { "@type": "Brand", name: "Élégance by Clark" },
-          offers: {
-            "@type": "Offer",
-            url: `${SITE}/product/${product.id}/`,
-            price: product.priceNum,
-            priceCurrency: "XOF",
-            availability: "https://schema.org/InStock",
-          },
-        }}
-      />
       <Toaster position="top-center" />
       <div className="container mx-auto max-w-6xl px-6 pt-24 pb-16">
         <button onClick={() => navigate(-1)} className="flex items-center justify-center md:justify-start gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors mb-10 w-full md:w-auto">
