@@ -55,7 +55,7 @@ export default function Header() {
         <div className="flex justify-center">
           <Link to="/" className="block">
             <img
-              src="/logo.jpg"
+              src="/images/logo.jpg"
               alt="Élégance by Clark"
               className="h-10 w-auto object-contain rounded-sm"
             />

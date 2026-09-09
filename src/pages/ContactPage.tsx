@@ -9,7 +9,7 @@ export default function ContactPage() {
   return (
     <Layout>
       <section className="relative h-64 md:h-72 flex items-end justify-center pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }} />
         <div className="absolute inset-0 bg-black/65" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-brand-cream mb-3">Nous écrire</p>

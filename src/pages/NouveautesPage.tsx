@@ -6,9 +6,9 @@ import { ArrowRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 const nouveautes = [
-  { img: "/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
-  { img: "/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Bientôt" },
-  { img: "/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
+  { img: "/images/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
+  { img: "/images/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Bientôt" },
+  { img: "/images/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
 ];
 
 export default function NouveautesPage() {
@@ -17,7 +17,7 @@ export default function NouveautesPage() {
   return (
     <Layout>
       <section className="relative h-64 md:h-80 flex items-end justify-center pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/hero.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }} />
         <div className="absolute inset-0 bg-black/60" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-brand-cream mb-3">Collection 2026</p>

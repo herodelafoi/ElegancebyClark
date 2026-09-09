@@ -52,7 +52,7 @@ export default function ContactSection() {
   return (
     <section className="py-24 px-6 bg-card relative overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/hero.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
       />
       <div className="absolute inset-0 backdrop-blur-md bg-card/80" />
 
