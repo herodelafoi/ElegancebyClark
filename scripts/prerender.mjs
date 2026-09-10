@@ -69,6 +69,39 @@ const routes = [
       <ul>${productList}</ul>
       ${nav}`,
   },
+  {
+    path: "/a-propos",
+    title: "À propos | Élégance by Clark",
+    description:
+      "Élégance by Clark, maison de mode africaine de prestige à Abidjan : notre vision, notre savoir-faire et l'exigence du détail sur chaque création.",
+    body: `
+      <h1>À propos</h1>
+      <h2>L'élégance masculine réinventée</h2>
+      <p>Chez Élégance by Clark, nous croyons que l'élégance est un héritage, une signature et une manière de s'affirmer avec assurance. Notre vision est de bâtir une maison de mode africaine de prestige, capable de rivaliser avec les plus grandes références internationales, tout en valorisant notre identité et notre savoir-faire. Chaque création est pensée comme une œuvre où le raffinement, l'exigence et le souci du détail se rencontrent pour révéler le meilleur de celui ou celle qui la porte.</p>
+      <p>Nous ne créons pas simplement des vêtements : nous façonnons une image, une présence et une expérience. À travers des collections intemporelles, des finitions irréprochables et un service d'exception, nous souhaitons inspirer une génération qui choisit l'excellence sans compromis. Notre ambition est de faire d'Élégance by Clark un symbole de distinction, d'innovation et de luxe, reconnu en Côte d'Ivoire, en Afrique et sur les plus grandes scènes internationales.</p>
+      <ul>
+        <li><h3>Qualité premium</h3><p>Tissus sélectionnés pour garantir confort et durabilité.</p></li>
+        <li><h3>Style minimaliste</h3><p>Des pièces simples et élégantes adaptées à toutes les occasions.</p></li>
+        <li><h3>Confort quotidien</h3><p>Coupes pensées pour un usage quotidien sans compromis.</p></li>
+        <li><h3>Design intemporel</h3><p>Des vêtements qui restent élégants saison après saison.</p></li>
+      </ul>
+      ${nav}`,
+  },
+  {
+    path: "/contact",
+    title: "Contact | Élégance by Clark",
+    description:
+      "Contactez Élégance by Clark à Abidjan : WhatsApp +225 07 79 08 43 94, contact@elegancebyclark.com, Cocody 2 Plateaux Vallon, Rue des Jardins.",
+    body: `
+      <h1>Contact</h1>
+      <h2>Prenons contact</h2>
+      <ul>
+        <li>Email : contact@elegancebyclark.com</li>
+        <li>WhatsApp / Téléphone : +225 07 79 08 43 94</li>
+        <li>Localisation : Cocody 2 Plateaux Vallon, Rue des Jardins</li>
+      </ul>
+      ${nav}`,
+  },
   ...products.map((p) => ({
     path: `/product/${p.id}`,
     title: `${p.name} | Élégance by Clark`,
