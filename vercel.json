@@ -8,42 +8,42 @@
   ],
   "redirects": [
     {
-      "source": "/product/t-shirt-essential",
+      "source": "/product/t-shirt-essential/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/product/chemise-premium",
+      "source": "/product/chemise-premium/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/product/polo-minimal",
+      "source": "/product/polo-minimal/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/produit/1",
+      "source": "/produit/1/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/produit/2",
+      "source": "/produit/2/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/produit/3",
+      "source": "/produit/3/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/produit/4",
+      "source": "/produit/4/",
       "destination": "/collection/",
       "permanent": true
     },
     {
-      "source": "/produit/5",
+      "source": "/produit/5/",
       "destination": "/collection/",
       "permanent": true
     }
