@@ -119,9 +119,11 @@ const routes = [
       ${nav}`,
   },
   {
-    // Le contenu du panier vit dans le navigateur : on ne prérend que ce qui est
-    // vrai pour tout le monde, jamais « Votre panier est vide ».
+    // The cart's contents live in the browser: prerender only what holds for
+    // every visitor, never "Votre panier est vide". A cart has no place in
+    // search results, so the served HTML itself carries the noindex.
     path: "/panier",
+    robots: "noindex, follow",
     title: "Panier | Élégance by Clark",
     description:
       "Votre panier Élégance by Clark : retrouvez vos pièces sélectionnées et finalisez votre commande via WhatsApp.",
@@ -153,6 +155,9 @@ for (const route of routes) {
     .replace(
       /<meta name="description"[^>]*>/,
       `<meta name="description" content="${esc(route.description)}">`
+    )
+    .replace(/<meta name="robots"[^>]*>/, (tag) =>
+      route.robots ? `<meta name="robots" content="${esc(route.robots)}" />` : tag
     )
     .replace('<div id="root"></div>', `<div id="root">${route.body}</div>`);
 

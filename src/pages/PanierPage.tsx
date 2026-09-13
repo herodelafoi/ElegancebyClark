@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShoppingBag, Minus, Plus, Trash2, ArrowLeft } from "lucide-react";
@@ -12,6 +13,21 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function PanierPage() {
   usePageTitle("Panier | Élégance by Clark");
+
+  // A cart has no place in search results. The tag outlives client-side
+  // navigation, so leaving the cart puts back the site-wide default.
+  useEffect(() => {
+    const existing = document.querySelector<HTMLMetaElement>("meta[name=robots]");
+    const meta = existing ?? document.createElement("meta");
+    if (!existing) {
+      meta.name = "robots";
+      document.head.appendChild(meta);
+    }
+    meta.content = "noindex, follow";
+    return () => {
+      meta.content = "index, follow";
+    };
+  }, []);
 
   const { items, removeItem, updateQuantity, clearCart, totalItems, totalPrice } = useCart();
 
