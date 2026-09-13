@@ -1,15 +1,5 @@
 {
   "trailingSlash": true,
-  "rewrites": [
-    {
-      "source": "/nouveautes/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/panier/",
-      "destination": "/index.html"
-    }
-  ],
   "redirects": [
     {
       "source": "/product/t-shirt-essential/",
