@@ -54,7 +54,7 @@ export default function AboutBrand() {
               Afrique et sur les plus grandes scènes internationales. Porter Élégance by Clark, c’est choisir une
               identité où la confiance, le prestige et l’élégance deviennent une évidence.
             </p>
-            <Link to="/contact" className="inline-flex items-center justify-center font-medium border bg-transparent rounded-none w-fit px-8 h-12 text-xs tracking-widest uppercase border-foreground/30 text-foreground hover:bg-foreground/5 transition-colors">
+            <Link to="/contact/" className="inline-flex items-center justify-center font-medium border bg-transparent rounded-none w-fit px-8 h-12 text-xs tracking-widest uppercase border-foreground/30 text-foreground hover:bg-foreground/5 transition-colors">
               Nous contacter <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </motion.div>

@@ -27,17 +27,17 @@ const esc = (s) =>
 const nav = `
   <nav>
     <a href="/">Accueil</a>
-    <a href="/collection">Collection</a>
-    <a href="/nouveautes">Nouveautés</a>
-    <a href="/a-propos">À propos</a>
-    <a href="/contact">Contact</a>
+    <a href="/collection/">Collection</a>
+    <a href="/nouveautes/">Nouveautés</a>
+    <a href="/a-propos/">À propos</a>
+    <a href="/contact/">Contact</a>
   </nav>`;
 
 const productList = products
   .map(
     (p) => `
     <li>
-      <a href="/product/${p.id}">
+      <a href="/product/${p.id}/">
         <img src="${p.img}" alt="${esc(p.name)}" width="300" />
         <h3>${esc(p.name)}</h3>
         <p>${esc(p.price)}</p>
@@ -60,7 +60,7 @@ const routes = [
       ${nav}`,
   },
   {
-    path: "/collection",
+    path: "/collection/",
     title: "Collection | Élégance by Clark",
     description:
       "Découvrez la collection Élégance by Clark : kimonos, blazers signature et ensembles pour hommes, à Abidjan. Commande simple via WhatsApp.",
@@ -70,7 +70,7 @@ const routes = [
       ${nav}`,
   },
   {
-    path: "/a-propos",
+    path: "/a-propos/",
     title: "À propos | Élégance by Clark",
     description:
       "Élégance by Clark, maison de mode africaine de prestige à Abidjan : notre vision, notre savoir-faire et l'exigence du détail sur chaque création.",
@@ -88,7 +88,7 @@ const routes = [
       ${nav}`,
   },
   {
-    path: "/contact",
+    path: "/contact/",
     title: "Contact | Élégance by Clark",
     description:
       "Contactez Élégance by Clark à Abidjan : WhatsApp +225 07 79 08 43 94, contact@elegancebyclark.com, Cocody 2 Plateaux Vallon, Rue des Jardins.",
@@ -103,7 +103,7 @@ const routes = [
       ${nav}`,
   },
   {
-    path: "/nouveautes",
+    path: "/nouveautes/",
     title: "Nouveautés | Élégance by Clark",
     description:
       "Nouveautés Élégance by Clark, collection 2026 : le kimono orange, et bientôt l'ensemble noir et le look casual été. Vêtements pour hommes à Abidjan.",
@@ -115,25 +115,25 @@ const routes = [
         <li><img src="/images/ensemble-signature-noir.jpg" alt="Ensemble Noir" width="300" /><h3>Ensemble Noir</h3><p>Bientôt</p></li>
         <li><img src="/images/nouveaute-look-casual-ete.jpg" alt="Look Casual Été" width="300" /><h3>Look Casual Été</h3><p>Bientôt</p></li>
       </ul>
-      <a href="/collection">Voir toute la collection</a>
+      <a href="/collection/">Voir toute la collection</a>
       ${nav}`,
   },
   {
     // The cart's contents live in the browser: prerender only what holds for
     // every visitor, never "Votre panier est vide". A cart has no place in
     // search results, so the served HTML itself carries the noindex.
-    path: "/panier",
+    path: "/panier/",
     robots: "noindex, follow",
     title: "Panier | Élégance by Clark",
     description:
       "Votre panier Élégance by Clark : retrouvez vos pièces sélectionnées et finalisez votre commande via WhatsApp.",
     body: `
-      <a href="/collection">Continuer les achats</a>
+      <a href="/collection/">Continuer les achats</a>
       <h1>Mon Panier</h1>
       ${nav}`,
   },
   ...products.map((p) => ({
-    path: `/product/${p.id}`,
+    path: `/product/${p.id}/`,
     title: `${p.name} | Élégance by Clark`,
     description: `${p.name} — ${p.price}. ${p.description.split("\n")[0]}`,
     body: `

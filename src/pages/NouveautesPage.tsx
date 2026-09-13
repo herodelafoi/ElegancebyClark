@@ -39,7 +39,7 @@ export default function NouveautesPage() {
             ))}
           </div>
           <div className="text-center mt-14">
-            <Link to="/collection">
+            <Link to="/collection/">
               <Button className="bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none h-12 px-10 text-xs tracking-widest uppercase">
                 Voir toute la collection <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

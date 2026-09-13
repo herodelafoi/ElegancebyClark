@@ -31,7 +31,7 @@ export default function ProductDetail() {
     toast.success(
       <span>
         {product.name} ({selectedSize}) ajouté au panier.{" "}
-        <Link to="/panier" className="underline font-medium">Voir le panier →</Link>
+        <Link to="/panier/" className="underline font-medium">Voir le panier →</Link>
       </span>
     );
   };

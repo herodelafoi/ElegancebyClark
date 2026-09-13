@@ -11,7 +11,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
       initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.08 }}
       className="group cursor-pointer"
     >
-      <Link to={`/product/${product.id}`} className="block">
+      <Link to={`/product/${product.id}/`} className="block">
         <div className="relative overflow-hidden aspect-[3/4] mb-4">
           <img src={product.img} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />

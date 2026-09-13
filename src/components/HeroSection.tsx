@@ -61,10 +61,10 @@ export default function HeroSection() {
         duration: 0.8,
         delay: 0.45
       }} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/collection" className="inline-flex items-center justify-center font-medium bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none px-8 h-12 text-xs tracking-widest uppercase transition-colors">
+          <Link to="/collection/" className="inline-flex items-center justify-center font-medium bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none px-8 h-12 text-xs tracking-widest uppercase transition-colors">
             Découvrir la collection
           </Link>
-          <Link to="/contact" className="inline-flex items-center justify-center font-medium border bg-transparent rounded-none px-8 h-12 text-xs tracking-widest uppercase border-white/40 text-white hover:bg-white/10 transition-colors">
+          <Link to="/contact/" className="inline-flex items-center justify-center font-medium border bg-transparent rounded-none px-8 h-12 text-xs tracking-widest uppercase border-white/40 text-white hover:bg-white/10 transition-colors">
             Nous contacter <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </motion.div>

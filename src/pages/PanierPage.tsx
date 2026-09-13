@@ -49,7 +49,7 @@ export default function PanierPage() {
       <div className="container mx-auto max-w-5xl px-6 pt-28 pb-20">
         {/* Back */}
         <Link
-          to="/collection"
+          to="/collection/"
           className="flex w-full justify-center md:inline-flex md:w-auto md:justify-start items-center gap-2 text-xs tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors mb-10"
         >
           <ArrowLeft className="w-4 h-4" /> Continuer les achats
@@ -81,7 +81,7 @@ export default function PanierPage() {
                   transition={{ delay: i * 0.08 }}
                   className="flex gap-5 border-b border-border pb-6"
                 >
-                  <Link to={`/product/${item.id}`} className="shrink-0">
+                  <Link to={`/product/${item.id}/`} className="shrink-0">
                     <img
                       src={item.img}
                       alt={item.name}
@@ -92,7 +92,7 @@ export default function PanierPage() {
                     <div className="flex justify-between items-start">
                       <div>
                         <Link
-                          to={`/product/${item.id}`}
+                          to={`/product/${item.id}/`}
                           className="font-light text-base hover:text-brand-cream transition-colors"
                           style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
                         >
@@ -208,7 +208,7 @@ function EmptyCart() {
           Découvrez notre collection et ajoutez vos pièces favorites.
         </p>
       </div>
-      <Link to="/collection">
+      <Link to="/collection/">
         <Button className="bg-brand-cream text-brand-dark hover:bg-brand-cream/90 rounded-none h-11 px-8 text-xs tracking-widest uppercase">
           Voir la collection
         </Button>
