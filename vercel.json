@@ -2,7 +2,11 @@
   "trailingSlash": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/nouveautes/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/panier/",
       "destination": "/index.html"
     }
   ],
