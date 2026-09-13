@@ -102,6 +102,34 @@ const routes = [
       </ul>
       ${nav}`,
   },
+  {
+    path: "/nouveautes",
+    title: "Nouveautés | Élégance by Clark",
+    description:
+      "Nouveautés Élégance by Clark, collection 2026 : le kimono orange, et bientôt l'ensemble noir et le look casual été. Vêtements pour hommes à Abidjan.",
+    body: `
+      <h1>Nouveautés</h1>
+      <p>Collection 2026</p>
+      <ul>
+        <li><img src="/images/kimono-signature-terracotta.jpg" alt="Kimono - Orange" width="300" /><h3>Kimono - Orange</h3><p>Nouveau</p></li>
+        <li><img src="/images/ensemble-signature-noir.jpg" alt="Ensemble Noir" width="300" /><h3>Ensemble Noir</h3><p>Bientôt</p></li>
+        <li><img src="/images/nouveaute-look-casual-ete.jpg" alt="Look Casual Été" width="300" /><h3>Look Casual Été</h3><p>Bientôt</p></li>
+      </ul>
+      <a href="/collection">Voir toute la collection</a>
+      ${nav}`,
+  },
+  {
+    // Le contenu du panier vit dans le navigateur : on ne prérend que ce qui est
+    // vrai pour tout le monde, jamais « Votre panier est vide ».
+    path: "/panier",
+    title: "Panier | Élégance by Clark",
+    description:
+      "Votre panier Élégance by Clark : retrouvez vos pièces sélectionnées et finalisez votre commande via WhatsApp.",
+    body: `
+      <a href="/collection">Continuer les achats</a>
+      <h1>Mon Panier</h1>
+      ${nav}`,
+  },
   ...products.map((p) => ({
     path: `/product/${p.id}`,
     title: `${p.name} | Élégance by Clark`,
