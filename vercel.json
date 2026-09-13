@@ -1,0 +1,51 @@
+{
+  "trailingSlash": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/product/t-shirt-essential",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/product/chemise-premium",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/product/polo-minimal",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/produit/1",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/produit/2",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/produit/3",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/produit/4",
+      "destination": "/collection/",
+      "permanent": true
+    },
+    {
+      "source": "/produit/5",
+      "destination": "/collection/",
+      "permanent": true
+    }
+  ]
+}
