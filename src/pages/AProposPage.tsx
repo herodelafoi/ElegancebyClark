@@ -29,7 +29,7 @@ export default function AProposPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="relative">
               <div className="aspect-[4/5] overflow-hidden">
-                <img src="/images/ensemble-signature-noir.jpg" alt="À propos" className="w-full h-full object-cover" />
+                <img src="/images/photo-clark.jpg" alt="Portrait de Clark" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-cream/30 hidden md:block" />
             </motion.div>
