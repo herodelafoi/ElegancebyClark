@@ -12,7 +12,7 @@ const nouveautes = [
 ];
 
 export default function NouveautesPage() {
-  usePageTitle("Nouveautés | Élégance by Clark");
+  usePageTitle("Arrivages Récents - Élégance by Clark");
 
   return (
     <Layout>

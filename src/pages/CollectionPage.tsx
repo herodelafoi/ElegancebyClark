@@ -27,7 +27,7 @@ function ProductCard({ product, index }: { product: typeof products[0]; index: n
 }
 
 export default function CollectionPage() {
-  usePageTitle("Collection | Élégance by Clark");
+  usePageTitle("Blazers, Kimonos & Ensembles - Élégance by Clark");
 
   return (
     <Layout>

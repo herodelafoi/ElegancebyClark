@@ -12,7 +12,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function PanierPage() {
-  usePageTitle("Panier | Élégance by Clark");
+  usePageTitle("Mon Panier - Élégance by Clark");
 
   // A cart has no place in search results. The tag outlives client-side
   // navigation, so leaving the cart puts back the site-wide default.

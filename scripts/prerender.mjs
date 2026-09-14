@@ -49,7 +49,7 @@ const productList = products
 const routes = [
   {
     path: "/",
-    title: "Élégance by Clark",
+    title: "Vêtements Homme Intemporel - Élégance by Clark",
     description:
       "Élégance by Clark habille l'homme moderne : kimonos, blazers signature et ensembles, casual chic et intemporels. Commande via WhatsApp, livraison à Abidjan.",
     body: `
@@ -61,7 +61,7 @@ const routes = [
   },
   {
     path: "/collection/",
-    title: "Collection | Élégance by Clark",
+    title: "Blazers, Kimonos & Ensembles - Élégance by Clark",
     description:
       "Découvrez la collection Élégance by Clark : kimonos, blazers signature et ensembles pour hommes, à Abidjan. Commande simple via WhatsApp.",
     body: `
@@ -71,7 +71,7 @@ const routes = [
   },
   {
     path: "/a-propos/",
-    title: "À propos | Élégance by Clark",
+    title: "Qui Sommes nous ? - Élégance by Clark",
     description:
       "Élégance by Clark, maison de mode africaine de prestige à Abidjan : notre vision, notre savoir-faire et l'exigence du détail sur chaque création.",
     body: `
@@ -89,7 +89,7 @@ const routes = [
   },
   {
     path: "/contact/",
-    title: "Contact | Élégance by Clark",
+    title: "Commande & Support - Élégance by Clark",
     description:
       "Contactez Élégance by Clark à Abidjan : WhatsApp +225 07 79 08 43 94, contact@elegancebyclark.com, Cocody 2 Plateaux Vallon, Rue des Jardins.",
     body: `
@@ -104,7 +104,7 @@ const routes = [
   },
   {
     path: "/nouveautes/",
-    title: "Nouveautés | Élégance by Clark",
+    title: "Arrivages Récents - Élégance by Clark",
     description:
       "Nouveautés Élégance by Clark, collection 2026 : le kimono orange, et bientôt l'ensemble noir et le look casual été. Vêtements pour hommes à Abidjan.",
     body: `
@@ -124,7 +124,7 @@ const routes = [
     // search results, so the served HTML itself carries the noindex.
     path: "/panier/",
     robots: "noindex, follow",
-    title: "Panier | Élégance by Clark",
+    title: "Mon Panier - Élégance by Clark",
     description:
       "Votre panier Élégance by Clark : retrouvez vos pièces sélectionnées et finalisez votre commande via WhatsApp.",
     body: `

@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 export default function ContactPage() {
-  usePageTitle("Contact | Élégance by Clark");
+  usePageTitle("Commande & Support - Élégance by Clark");
 
   return (
     <Layout>

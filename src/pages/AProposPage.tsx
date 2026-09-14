@@ -11,7 +11,7 @@ const values = [
 ];
 
 export default function AProposPage() {
-  usePageTitle("À propos | Élégance by Clark");
+  usePageTitle("Qui Sommes nous ? - Élégance by Clark");
 
   return (
     <Layout>
