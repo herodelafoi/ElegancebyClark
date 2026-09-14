@@ -51,7 +51,7 @@ const routes = [
     path: "/",
     title: "Vêtements Hommes Intemporels - Élégance by Clark",
     description:
-      "Élégance by Clark habille l'homme moderne : kimonos, blazers signature et ensembles, casual chic et intemporels. Commande via WhatsApp, livraison à Abidjan.",
+      "Découvrez nos kimonos et blazers intemporels pour hommes. Vêtements chic et modernes, casual ou signature. Commande via WhatsApp - Livraison partout à Abidjan.",
     body: `
       <h1>L'élégance masculine dans sa forme la plus simple.</h1>
       <p>Vêtements modernes conçus pour les hommes qui recherchent style, confort et simplicité.</p>
@@ -63,7 +63,7 @@ const routes = [
     path: "/collection/",
     title: "Blazers, Kimonos & Ensembles - Élégance by Clark",
     description:
-      "Découvrez la collection Élégance by Clark : kimonos, blazers signature et ensembles pour hommes, à Abidjan. Commande simple via WhatsApp.",
+      "Collection exclusive de blazers, kimonos et ensembles pour hommes. Mode intemporelle, casual chic. Tous les styles en un seul endroit. Commande WhatsApp.",
     body: `
       <h1>La Collection</h1>
       <ul>${productList}</ul>
@@ -73,7 +73,7 @@ const routes = [
     path: "/a-propos/",
     title: "Qui sommes-nous ? - Élégance by Clark",
     description:
-      "Élégance by Clark, maison de mode africaine de prestige à Abidjan : notre vision, notre savoir-faire et l'exigence du détail sur chaque création.",
+      "Découvrez l'histoire d'Élégance by Clark. Vêtements hommes intemporels, casual chic et de qualité. Notre mission : l'élégance accessible pour tous.",
     body: `
       <h1>À propos</h1>
       <h2>L'élégance masculine réinventée</h2>
@@ -91,7 +91,7 @@ const routes = [
     path: "/contact/",
     title: "Commande & Support - Élégance by Clark",
     description:
-      "Contactez Élégance by Clark à Abidjan : WhatsApp +225 07 79 08 43 94, contact@elegancebyclark.com, Cocody 2 Plateaux Vallon, Rue des Jardins.",
+      "Contactez Élégance by Clark. Commandes, questions, support. WhatsApp, email, téléphone. Nous répondons rapidement pour vous servir au mieux.",
     body: `
       <h1>Contact</h1>
       <h2>Prenons contact</h2>
@@ -106,7 +106,7 @@ const routes = [
     path: "/nouveautes/",
     title: "Arrivages Récents - Élégance by Clark",
     description:
-      "Nouveautés Élégance by Clark, collection 2026 : le kimono orange, et bientôt l'ensemble noir et le look casual été. Vêtements pour hommes à Abidjan.",
+      "Arrivages récents chez Élégance by Clark. Nouveaux kimonos, blazers et ensembles. Découvrez les dernières collections 2026 pour l'homme moderne.",
     body: `
       <h1>Nouveautés</h1>
       <p>Collection 2026</p>
@@ -126,7 +126,7 @@ const routes = [
     robots: "noindex, follow",
     title: "Mon Panier - Élégance by Clark",
     description:
-      "Votre panier Élégance by Clark : retrouvez vos pièces sélectionnées et finalisez votre commande via WhatsApp.",
+      "Mon Panier - Élégance by Clark. Consultez et finalisez votre commande. Paiement sécurisé, livraison rapide à Abidjan.",
     body: `
       <a href="/collection/">Continuer les achats</a>
       <h1>Mon Panier</h1>
