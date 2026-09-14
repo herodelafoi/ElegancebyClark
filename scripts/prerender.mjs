@@ -49,7 +49,7 @@ const productList = products
 const routes = [
   {
     path: "/",
-    title: "Vêtements Homme Intemporel - Élégance by Clark",
+    title: "Vêtements Hommes Intemporels - Élégance by Clark",
     description:
       "Élégance by Clark habille l'homme moderne : kimonos, blazers signature et ensembles, casual chic et intemporels. Commande via WhatsApp, livraison à Abidjan.",
     body: `
@@ -71,7 +71,7 @@ const routes = [
   },
   {
     path: "/a-propos/",
-    title: "Qui Sommes nous ? - Élégance by Clark",
+    title: "Qui sommes-nous ? - Élégance by Clark",
     description:
       "Élégance by Clark, maison de mode africaine de prestige à Abidjan : notre vision, notre savoir-faire et l'exigence du détail sur chaque création.",
     body: `
@@ -134,7 +134,7 @@ const routes = [
   },
   ...products.map((p) => ({
     path: `/product/${p.id}/`,
-    title: `${p.name} | Élégance by Clark`,
+    title: `${p.name} - Élégance by Clark`,
     description: `${p.name} — ${p.price}. ${p.description.split("\n")[0]}`,
     body: `
       <h1>${esc(p.name)}</h1>

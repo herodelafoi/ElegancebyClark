@@ -17,7 +17,7 @@ export default function ProductDetail() {
   const { addItem } = useCart();
 
   // Called before the early return below: hooks must run on every render.
-  usePageTitle(product ? `${product.name} | Élégance by Clark` : "Élégance by Clark");
+  usePageTitle(product ? `${product.name} - Élégance by Clark` : "Élégance by Clark");
 
   if (!product) return (
     <div className="min-h-screen flex items-center justify-center bg-background">

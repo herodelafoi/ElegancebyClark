@@ -21,7 +21,7 @@ import { CartProvider } from "@/context/CartContext";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
 function Home() {
-  usePageTitle("Vêtements Homme Intemporel - Élégance by Clark");
+  usePageTitle("Vêtements Hommes Intemporels - Élégance by Clark");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
