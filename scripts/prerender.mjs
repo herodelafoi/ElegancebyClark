@@ -91,7 +91,7 @@ const routes = [
     path: "/contact/",
     title: "Commande & Support - Élégance by Clark",
     description:
-      "Contactez Élégance by Clark. Commandes, questions, support. WhatsApp, email, téléphone. Nous répondons rapidement pour vous servir au mieux.",
+      "Élégance by Clark Abidjan - Commandes WhatsApp +225 07 79 08 43 94. Email, visite Cocody. Questions, support. Nous répondons rapidement.",
     body: `
       <h1>Contact</h1>
       <h2>Prenons contact</h2>
@@ -106,7 +106,7 @@ const routes = [
     path: "/nouveautes/",
     title: "Arrivages Récents - Élégance by Clark",
     description:
-      "Arrivages récents chez Élégance by Clark. Nouveaux kimonos, blazers et ensembles. Découvrez les dernières collections 2026 pour l'homme moderne.",
+      "Arrivages récents chez Élégance by Clark. Nouveaux kimonos et pièces tendance. Découvrez les dernières collections 2026 pour l'homme moderne.",
     body: `
       <h1>Nouveautés</h1>
       <p>Collection 2026</p>
