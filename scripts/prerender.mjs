@@ -4,7 +4,7 @@
  * The app is client-rendered, so the HTML Vite ships has an empty <body> — a
  * crawler that does not execute JavaScript sees nothing at all. This fills each
  * route's #root with the text that route actually displays, and gives it its own
- * title and description. React replaces the markup on mount, so
+ * title, description and Open Graph tags. React replaces the markup on mount, so
  * what a crawler reads is what a visitor reads.
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -23,6 +23,22 @@ const esc = (s) =>
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+
+const site = "https://www.elegancebyclark.com";
+
+// What WhatsApp, Facebook and the like show when a page is shared: they read the
+// served HTML and never run JavaScript.
+const ogTags = (route) =>
+  [
+    ["og:title", route.title],
+    ["og:description", route.description],
+    ["og:url", site + route.path],
+    ["og:image", site + route.image],
+    ["og:type", "website"],
+  ]
+    .map(([property, content]) => `
+    <meta property="${property}" content="${esc(content)}" />`)
+    .join("");
 
 const nav = `
   <nav>
@@ -49,6 +65,7 @@ const productList = products
 const routes = [
   {
     path: "/",
+    image: "/images/og/accueil.jpg",
     title: "Vêtements Hommes Intemporels - Élégance by Clark",
     description:
       "Découvrez nos kimonos et blazers intemporels pour hommes. Vêtements chic et modernes, casual ou signature. Commande via WhatsApp - Livraison partout à Abidjan.",
@@ -61,6 +78,7 @@ const routes = [
   },
   {
     path: "/collection/",
+    image: "/images/og/collection.jpg",
     title: "Blazers, Kimonos & Ensembles - Élégance by Clark",
     description:
       "Collection exclusive de blazers, kimonos et ensembles pour hommes. Mode intemporelle, casual chic. Tous les styles en un seul endroit. Commande WhatsApp.",
@@ -71,6 +89,7 @@ const routes = [
   },
   {
     path: "/a-propos/",
+    image: "/images/og/a-propos.jpg",
     title: "Qui sommes-nous ? - Élégance by Clark",
     description:
       "Découvrez l'histoire d'Élégance by Clark. Vêtements hommes intemporels, casual chic et de qualité. Notre mission : l'élégance accessible pour tous.",
@@ -89,6 +108,7 @@ const routes = [
   },
   {
     path: "/contact/",
+    image: "/images/og/contact.jpg",
     title: "Commande & Support - Élégance by Clark",
     description:
       "Élégance by Clark Abidjan - Commandes WhatsApp +225 07 79 08 43 94. Email, visite Cocody. Questions, support. Nous répondons rapidement.",
@@ -104,6 +124,7 @@ const routes = [
   },
   {
     path: "/nouveautes/",
+    image: "/images/og/nouveautes.jpg",
     title: "Arrivages Récents - Élégance by Clark",
     description:
       "Arrivages récents chez Élégance by Clark. Nouveaux kimonos et pièces tendance. Découvrez les dernières collections 2026 pour l'homme moderne.",
@@ -123,6 +144,7 @@ const routes = [
     // every visitor, never "Votre panier est vide". A cart has no place in
     // search results, so the served HTML itself carries the noindex.
     path: "/panier/",
+    image: "/images/og/accueil.jpg",
     robots: "noindex, follow",
     title: "Mon Panier - Élégance by Clark",
     description:
@@ -134,6 +156,7 @@ const routes = [
   },
   ...products.map((p) => ({
     path: `/product/${p.id}/`,
+    image: p.img,
     title: `${p.name} - Élégance by Clark`,
     description: `${p.name} — ${p.price}. ${p.description.split("\n")[0]}`,
     body: `
@@ -154,7 +177,7 @@ for (const route of routes) {
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
     .replace(
       /<meta name="description"[^>]*>/,
-      `<meta name="description" content="${esc(route.description)}">`
+      `<meta name="description" content="${esc(route.description)}">` + ogTags(route)
     )
     .replace(/<meta name="robots"[^>]*>/, (tag) =>
       route.robots ? `<meta name="robots" content="${esc(route.robots)}" />` : tag
