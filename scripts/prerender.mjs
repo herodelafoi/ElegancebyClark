@@ -4,7 +4,7 @@
  * The app is client-rendered, so the HTML Vite ships has an empty <body> — a
  * crawler that does not execute JavaScript sees nothing at all. This fills each
  * route's #root with the text that route actually displays, and gives it its own
- * title, description and Open Graph tags. React replaces the markup on mount, so
+ * title, description, Open Graph and Twitter Card tags. React replaces the markup on mount, so
  * what a crawler reads is what a visitor reads.
  */
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -38,6 +38,18 @@ const ogTags = (route) =>
   ]
     .map(([property, content]) => `
     <meta property="${property}" content="${esc(content)}" />`)
+    .join("");
+
+// X reads its own tags; summary_large_image shows the shared image full width.
+const twitterTags = (route) =>
+  [
+    ["twitter:card", "summary_large_image"],
+    ["twitter:title", route.title],
+    ["twitter:description", route.description],
+    ["twitter:image", site + route.image],
+  ]
+    .map(([name, content]) => `
+    <meta name="${name}" content="${esc(content)}" />`)
     .join("");
 
 const nav = `
@@ -177,7 +189,7 @@ for (const route of routes) {
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
     .replace(
       /<meta name="description"[^>]*>/,
-      `<meta name="description" content="${esc(route.description)}">` + ogTags(route)
+      `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route)
     )
     .replace(/<meta name="robots"[^>]*>/, (tag) =>
       route.robots ? `<meta name="robots" content="${esc(route.robots)}" />` : tag
