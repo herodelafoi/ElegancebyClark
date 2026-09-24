@@ -10,7 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { breadcrumb, jsonLdScripts, localBusiness, organization } from "./schemas.mjs";
+import { breadcrumb, jsonLdScripts, localBusiness, organization, product } from "./schemas.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -183,6 +183,14 @@ const routes = [
   ...products.map((p) => ({
     path: `/product/${p.id}/`,
     image: p.img,
+    schemas: [
+      product(p),
+      breadcrumb([
+        ["Accueil", "/"],
+        ["Collection", "/collection/"],
+        [p.name, `/product/${p.id}/`],
+      ]),
+    ],
     title: `${p.name} - Élégance by Clark`,
     description: `${p.name} — ${p.price}. ${p.description.split("\n")[0]}`,
     body: `
