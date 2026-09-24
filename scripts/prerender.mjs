@@ -10,7 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { organization, jsonLdScripts } from "./schemas.mjs";
+import { breadcrumb, jsonLdScripts, localBusiness, organization } from "./schemas.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -99,6 +99,7 @@ const routes = [
   {
     path: "/collection/",
     hero: true,
+    schemas: [breadcrumb([["Accueil", "/"], ["Collection", "/collection/"]])],
     image: "/images/og/collection.jpg",
     title: "Blazers, Kimonos & Ensembles - Élégance by Clark",
     description:
@@ -111,6 +112,7 @@ const routes = [
   {
     path: "/a-propos/",
     hero: true,
+    schemas: [breadcrumb([["Accueil", "/"], ["À propos", "/a-propos/"]])],
     image: "/images/og/a-propos.jpg",
     title: "Qui sommes-nous ? - Élégance by Clark",
     description:
@@ -131,6 +133,7 @@ const routes = [
   {
     path: "/contact/",
     hero: true,
+    schemas: [localBusiness(), breadcrumb([["Accueil", "/"], ["Contact", "/contact/"]])],
     image: "/images/og/contact.jpg",
     title: "Commande & Support - Élégance by Clark",
     description:
@@ -148,6 +151,7 @@ const routes = [
   {
     path: "/nouveautes/",
     hero: true,
+    schemas: [breadcrumb([["Accueil", "/"], ["Nouveautés", "/nouveautes/"]])],
     image: "/images/og/nouveautes.jpg",
     title: "Arrivages Récents - Élégance by Clark",
     description:
