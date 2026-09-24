@@ -58,6 +58,11 @@ const twitterTags = (route) =>
 const heroPreload = `
     <link rel="preload" as="image" type="image/webp" href="/images/hero-960.webp" imagesrcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1366.webp 1366w" imagesizes="100vw" fetchpriority="high" />`;
 
+// One address per page, the same one the sitemap, og:url and the JSON-LD use:
+// tracking parameters such as ?fbclid or ?utm_source must not read as new pages.
+const canonicalTag = (route) => `
+    <link rel="canonical" href="${SITE.url}${route.path}" />`;
+
 const nav = `
   <nav>
     <a href="/">Accueil</a>
@@ -236,7 +241,7 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 
 for (const route of routes) {
   const html = template
-    .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
+    .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>` + canonicalTag(route))
     .replace(
       /<meta name="description"[^>]*>/,
       `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route) + (route.hero ? heroPreload : "") + jsonLdScripts(route.schemas)
