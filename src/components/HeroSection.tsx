@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import HeroImage from "@/components/HeroImage";
 export default function HeroSection() {
   return <section className="relative h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <motion.div
@@ -9,27 +10,7 @@ export default function HeroSection() {
         transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         className="absolute inset-0"
       >
-        {/* The LCP element on mobile. A real <img> can be preloaded and carries a
-            srcset; a CSS background stays hidden until the JS bundle has run. */}
-        <picture>
-          <source
-            type="image/webp"
-            srcSet="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1366.webp 1366w"
-            sizes="100vw"
-          />
-          <img
-            src="/images/hero-960.jpg"
-            srcSet="/images/hero-640.jpg 640w, /images/hero-960.jpg 960w, /images/hero-1366.jpg 1366w"
-            sizes="100vw"
-            alt=""
-            width={1366}
-            height={2048}
-            fetchPriority="high"
-            decoding="async"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "center 20%" }}
-          />
-        </picture>
+        <HeroImage priority objectPosition="center 20%" />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
 

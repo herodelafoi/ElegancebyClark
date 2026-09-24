@@ -96,6 +96,7 @@ const routes = [
   },
   {
     path: "/collection/",
+    hero: true,
     image: "/images/og/collection.jpg",
     title: "Blazers, Kimonos & Ensembles - Élégance by Clark",
     description:
@@ -107,6 +108,7 @@ const routes = [
   },
   {
     path: "/a-propos/",
+    hero: true,
     image: "/images/og/a-propos.jpg",
     title: "Qui sommes-nous ? - Élégance by Clark",
     description:
@@ -126,6 +128,7 @@ const routes = [
   },
   {
     path: "/contact/",
+    hero: true,
     image: "/images/og/contact.jpg",
     title: "Commande & Support - Élégance by Clark",
     description:
@@ -142,6 +145,7 @@ const routes = [
   },
   {
     path: "/nouveautes/",
+    hero: true,
     image: "/images/og/nouveautes.jpg",
     title: "Arrivages Récents - Élégance by Clark",
     description:

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import HeroImage from "@/components/HeroImage";
 import { ArrowRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
@@ -16,7 +17,7 @@ export default function NouveautesPage() {
   return (
     <Layout>
       <section className="relative h-64 md:h-80 flex items-end justify-center pb-12 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/hero.jpg')" }} />
+        <HeroImage priority />
         <div className="absolute inset-0 bg-black/60" />
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 text-center">
           <p className="text-xs tracking-[0.4em] uppercase text-brand-cream mb-3">Collection 2026</p>

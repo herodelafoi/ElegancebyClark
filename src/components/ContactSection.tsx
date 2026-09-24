@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import HeroImage from "@/components/HeroImage";
 
 const faqs = [
   {
@@ -51,9 +52,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
 export default function ContactSection() {
   return (
     <section className="py-24 px-6 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero.jpg')" }}
-      />
+      <HeroImage />
       <div className="absolute inset-0 backdrop-blur-md bg-card/80" />
 
       <div className="relative z-10 container mx-auto max-w-3xl">
