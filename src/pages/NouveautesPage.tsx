@@ -7,8 +7,8 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 // `href` only on the pieces already in the catalogue: the others have no page yet.
 const nouveautes: { img: string; label: string; badge: string; href?: string }[] = [
-  { img: "/images/chemise-signature-elegance-by-clark.jpg", label: "Chemise Signature Élégance by Clark", badge: "Nouveau", href: "/product/chemise-signature-elegance-by-clark/" },
   { img: "/images/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
+  { img: "/images/chemise-signature-elegance-by-clark.jpg", label: "Chemise Signature Élégance by Clark", badge: "Nouveau", href: "/product/chemise-signature-elegance-by-clark/" },
   { img: "/images/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Bientôt" },
   { img: "/images/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
 ];

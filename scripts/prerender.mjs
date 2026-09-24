@@ -144,8 +144,8 @@ const routes = [
       <h1>Nouveautés</h1>
       <p>Collection 2026</p>
       <ul>
-        <li><a href="/product/chemise-signature-elegance-by-clark/"><img src="/images/chemise-signature-elegance-by-clark.jpg" alt="Chemise Signature Élégance by Clark" width="300" /><h3>Chemise Signature Élégance by Clark</h3><p>Nouveau</p></a></li>
         <li><img src="/images/kimono-signature-terracotta.jpg" alt="Kimono - Orange" width="300" /><h3>Kimono - Orange</h3><p>Nouveau</p></li>
+        <li><a href="/product/chemise-signature-elegance-by-clark/"><img src="/images/chemise-signature-elegance-by-clark.jpg" alt="Chemise Signature Élégance by Clark" width="300" /><h3>Chemise Signature Élégance by Clark</h3><p>Nouveau</p></a></li>
         <li><img src="/images/ensemble-signature-noir.jpg" alt="Ensemble Noir" width="300" /><h3>Ensemble Noir</h3><p>Bientôt</p></li>
         <li><img src="/images/nouveaute-look-casual-ete.jpg" alt="Look Casual Été" width="300" /><h3>Look Casual Été</h3><p>Bientôt</p></li>
       </ul>
