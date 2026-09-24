@@ -7,12 +7,30 @@ export default function HeroSection() {
         initial={{ scale: 1 }}
         animate={{ scale: 1.08 }}
         transition={{ duration: 10, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-        className="absolute inset-0 bg-cover bg-no-repeat"
-        style={{
-          backgroundImage: "url('/images/hero.jpg')",
-          backgroundPosition: "center 20%"
-        }}
-      />
+        className="absolute inset-0"
+      >
+        {/* The LCP element on mobile. A real <img> can be preloaded and carries a
+            srcset; a CSS background stays hidden until the JS bundle has run. */}
+        <picture>
+          <source
+            type="image/webp"
+            srcSet="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1366.webp 1366w"
+            sizes="100vw"
+          />
+          <img
+            src="/images/hero-960.jpg"
+            srcSet="/images/hero-640.jpg 640w, /images/hero-960.jpg 960w, /images/hero-1366.jpg 1366w"
+            sizes="100vw"
+            alt=""
+            width={1366}
+            height={2048}
+            fetchPriority="high"
+            decoding="async"
+            className="w-full h-full object-cover"
+            style={{ objectPosition: "center 20%" }}
+          />
+        </picture>
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">

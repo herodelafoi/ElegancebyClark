@@ -52,6 +52,11 @@ const twitterTags = (route) =>
     <meta name="${name}" content="${esc(content)}" />`)
     .join("");
 
+// The hero is the page's largest paint: start it at HTML parse time instead of
+// waiting for the bundle. Only routes that actually show it get the hint.
+const heroPreload = `
+    <link rel="preload" as="image" type="image/webp" href="/images/hero-960.webp" imagesrcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1366.webp 1366w" imagesizes="100vw" fetchpriority="high" />`;
+
 const nav = `
   <nav>
     <a href="/">Accueil</a>
@@ -77,6 +82,7 @@ const productList = products
 const routes = [
   {
     path: "/",
+    hero: true,
     image: "/images/og/accueil.jpg",
     title: "Vêtements Hommes Intemporels - Élégance by Clark",
     description:
@@ -187,7 +193,7 @@ for (const route of routes) {
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
     .replace(
       /<meta name="description"[^>]*>/,
-      `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route)
+      `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route) + (route.hero ? heroPreload : "")
     )
     .replace(/<meta name="robots"[^>]*>/, (tag) =>
       route.robots ? `<meta name="robots" content="${esc(route.robots)}" />` : tag
