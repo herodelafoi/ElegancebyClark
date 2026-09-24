@@ -85,6 +85,8 @@ export default function PanierPage() {
                     <img
                       src={item.img}
                       alt={item.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-24 h-32 object-cover"
                     />
                   </Link>

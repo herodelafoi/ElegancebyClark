@@ -17,7 +17,7 @@ export default function AboutBrand() {
           duration: 0.8
         }} className="relative">
             <div className="aspect-[4/5] overflow-hidden">
-              <img src="/images/photo-clark.jpg" alt="Portrait de Clark" className='w-full h-full object-cover' />
+              <img src="/images/photo-clark.jpg" alt="Portrait de Clark" loading="lazy" decoding="async" className='w-full h-full object-cover' />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 border border-brand-cream/30 hidden md:block" />
           </motion.div>

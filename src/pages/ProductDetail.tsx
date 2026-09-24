@@ -45,7 +45,7 @@ export default function ProductDetail() {
         </button>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="aspect-[3/4] overflow-hidden">
-            <img src={product.img} alt={product.name} className="w-full h-full object-cover" />
+            <img src={product.img} alt={product.name} fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="flex flex-col gap-6 md:pt-4 text-center md:text-left">
             <p className="text-xs tracking-[0.4em] uppercase text-brand-cream">{product.category}</p>
