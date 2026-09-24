@@ -7,10 +7,7 @@ import { usePageTitle } from "@/hooks/usePageTitle";
 
 // `href` only on the pieces already in the catalogue: the others have no page yet.
 const nouveautes: { img: string; label: string; badge: string; href?: string }[] = [
-  { img: "/images/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
   { img: "/images/chemise-signature-elegance-by-clark.jpg", label: "Chemise Signature Élégance by Clark", badge: "Nouveau", href: "/product/chemise-signature-elegance-by-clark/" },
-  { img: "/images/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Nouveau" },
-  { img: "/images/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
 ];
 
 export default function NouveautesPage() {
@@ -29,7 +26,8 @@ export default function NouveautesPage() {
 
       <section className="py-20 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* A lone arrival stays a portrait card instead of stretching the full width. */}
+          <div className={`grid gap-8 ${nouveautes.length === 1 ? "max-w-sm mx-auto" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"}`}>
             {nouveautes.map((item, i) => {
               const card = (
                 <>
