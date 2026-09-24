@@ -5,7 +5,9 @@ import Layout from "@/components/Layout";
 import { ArrowRight } from "lucide-react";
 import { usePageTitle } from "@/hooks/usePageTitle";
 
-const nouveautes = [
+// `href` only on the pieces already in the catalogue: the others have no page yet.
+const nouveautes: { img: string; label: string; badge: string; href?: string }[] = [
+  { img: "/images/chemise-signature-elegance-by-clark.jpg", label: "Chemise Signature Élégance by Clark", badge: "Nouveau", href: "/product/chemise-signature-elegance-by-clark/" },
   { img: "/images/kimono-signature-terracotta.jpg", label: "Kimono - Orange", badge: "Nouveau" },
   { img: "/images/ensemble-signature-noir.jpg", label: "Ensemble Noir", badge: "Bientôt" },
   { img: "/images/nouveaute-look-casual-ete.jpg", label: "Look Casual Été", badge: "Bientôt" },
@@ -27,16 +29,23 @@ export default function NouveautesPage() {
 
       <section className="py-20 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {nouveautes.map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="group">
-                <div className="relative overflow-hidden aspect-[3/4] mb-4">
-                  <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <span className="absolute top-3 left-3 text-xs tracking-widest uppercase px-3 py-1 bg-brand-cream text-brand-dark">{item.badge}</span>
-                </div>
-                <h3 className="text-sm font-medium tracking-wide">{item.label}</h3>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {nouveautes.map((item, i) => {
+              const card = (
+                <>
+                  <div className="relative overflow-hidden aspect-[3/4] mb-4">
+                    <img src={item.img} alt={item.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <span className="absolute top-3 left-3 text-xs tracking-widest uppercase px-3 py-1 bg-brand-cream text-brand-dark">{item.badge}</span>
+                  </div>
+                  <h3 className="text-sm font-medium tracking-wide">{item.label}</h3>
+                </>
+              );
+              return (
+                <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: i * 0.1 }} className="group">
+                  {item.href ? <Link to={item.href}>{card}</Link> : card}
+                </motion.div>
+              );
+            })}
           </div>
           <div className="text-center mt-14">
             <Link to="/collection/">
