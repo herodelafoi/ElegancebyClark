@@ -10,7 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { breadcrumb, jsonLdScripts, localBusiness, organization, product } from "./schemas.mjs";
+import { SITE, breadcrumb, jsonLdScripts, localBusiness, organization, product } from "./schemas.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -206,6 +206,34 @@ const routes = [
   })),
 ];
 
+// Search engines mostly ignore <priority>, but other tools still read it.
+const priority = (path) =>
+  path === "/"
+    ? "1.0"
+    : path === "/nouveautes/"
+      ? "0.9"
+      : path === "/collection/"
+        ? "0.8"
+        : path.startsWith("/product/")
+          ? "0.7"
+          : "0.6";
+
+// Built from the routes above, so a page added there is never missing here.
+// Routes carrying a robots override are noindex and stay out.
+const sitemapEntry = (route) => `
+  <url>
+    <loc>${SITE.url}${route.path}</loc>
+    <priority>${priority(route.path)}</priority>
+  </url>`;
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes
+  .filter((route) => !route.robots)
+  .map(sitemapEntry)
+  .join("")}
+</urlset>
+`;
+
 for (const route of routes) {
   const html = template
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
@@ -225,3 +253,6 @@ for (const route of routes) {
 }
 
 console.log(`prerendered ${routes.length} routes`);
+
+writeFileSync(join(dist, "sitemap.xml"), sitemap);
+console.log(`sitemap: ${(sitemap.match(/<loc>/g) || []).length} URLs`);
