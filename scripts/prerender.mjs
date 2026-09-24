@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { organization, jsonLdScripts } from "./schemas.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const dist = join(root, "dist");
@@ -83,6 +84,7 @@ const routes = [
   {
     path: "/",
     hero: true,
+    schemas: [organization()],
     image: "/images/og/accueil.jpg",
     title: "Vêtements Hommes Intemporels - Élégance by Clark",
     description:
@@ -197,7 +199,7 @@ for (const route of routes) {
     .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(route.title)}</title>`)
     .replace(
       /<meta name="description"[^>]*>/,
-      `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route) + (route.hero ? heroPreload : "")
+      `<meta name="description" content="${esc(route.description)}">` + ogTags(route) + twitterTags(route) + (route.hero ? heroPreload : "") + jsonLdScripts(route.schemas)
     )
     .replace(/<meta name="robots"[^>]*>/, (tag) =>
       route.robots ? `<meta name="robots" content="${esc(route.robots)}" />` : tag
